@@ -1,0 +1,513 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #123265;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0f2953;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: #123265;
+    scrollbar-width: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: "Cairo", serif;
+}
+
+    /*start framework*/
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.title-colorful-one {
+    width: fit-content;
+    margin: 0 auto 65px;
+    padding: 10px 35px;
+    position: relative;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 0 12px #8d8d8d;
+    color: wheat;
+    background-color: #123265;
+}
+
+.title-colorful-two {
+    width: fit-content;
+    margin: 0 auto 65px;
+    padding: 10px 35px;
+    position: relative;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 8px #909090;
+    color: #fcefe9;
+    background-color: #b8954e;
+}
+
+@media (max-width: 430px) {
+    .title-colorful-one {
+        padding: 10px 25px;
+        font-size: 20px;
+    }
+
+    .title-colorful-two {
+        padding: 10px 26px;
+        font-size: 20px;
+    }
+}
+
+    /*end framework*/
+
+    /*start header*/
+
+header {
+    padding: 7px 0 15px;
+    background-image: url(photos/معبد\ إدفو.jpg);
+    background-size: cover;
+    background-position: 0 66%;
+    border-radius: 0 0 56px 56px;
+    position: relative;
+}
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+    background-color: #123265d1;
+}
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f5f3f3;
+    z-index: -2;
+}
+    
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+header .container div:first-child {
+    font-size: 25px;
+    font-weight: 600;
+    color: wheat;
+    z-index: 1;
+}
+
+header .container img {
+    width: 50px;
+    z-index: 1;
+}
+
+header .container div:last-child {
+    font-size: 23px;
+    font-weight: 600;
+    color: wheat;
+    z-index: 1;
+}
+    
+/*media*/
+
+@media (max-width: 768px) {
+    header {
+        padding: 4px 0 8px;
+        border-radius: 0 0 40px 40px;
+    }
+
+    header::before {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    
+    header .container div:first-child {
+        font-size: 20px;
+    }
+    
+    header .container div:last-child {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    header .container div:first-child {
+        font-size: 16px;
+    }
+
+    header .container img {
+        width: 45px;
+        z-index: 1;
+    }
+
+    header .container div:last-child {
+        font-size: 16px;
+    }
+
+    footer div {
+        font-size: 12px;
+    }
+}   
+
+    /*end header*/
+
+    /*start body*/
+
+.lec {
+    padding: 70px 0 0;
+    direction: rtl;
+    background-color: #f5f3f3;
+}
+
+/*start the first*/
+
+.lec .first .container {
+    display: flex;
+    padding-bottom: 70px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+}
+
+.lec .first .container > figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.lec .first .container > figure img {
+    width: 200px;
+    box-shadow: 0 0 8px #9d9b9b;
+}
+
+.lec .first .container > figure figcaption {
+    font-weight: bold;
+}
+
+.lec .first .container .article-fir {
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.lec .first .container .article-fir strong {
+    letter-spacing: 1px;
+    color: #188095;
+}
+
+/*media*/
+
+@media (max-width: 1200px) {
+    .lec .first .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+/*start the second*/
+
+.lec .second {
+    padding: 70px 0;
+    background-image: url(photos/معبد\ إدفو.jpg);
+    background-size: cover;
+    background-position: 0 78%;
+    position: relative;
+}
+.lec .second::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #123265f5;
+}
+
+.lec .second .container .article-sec {
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    line-height: 31px;
+    color: white;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lec .second .container .article-sec span {
+    font-weight: 400;
+    color: wheat;
+}
+
+/*start the third*/
+
+.lec .third {
+    padding: 70px 0;
+}
+
+.lec .third .container .article-th {
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.lec .third .container .article-th strong {
+    letter-spacing: 1px;
+    color: #188095;
+}
+
+/*start the fourth*/
+
+.lec .fourth {
+    padding: 70px 0;
+    background-image: url(photos/معبد\ إدفو.jpg);
+    background-size: 100% 100%;
+    position: relative;
+}
+.lec .fourth::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #123265f5;
+}
+
+.lec .fourth .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 22px;
+}
+
+.lec .fourth .container > figure {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.lec .fourth .container > figure img {
+    width: 200px;
+    box-shadow: 0 0 6px #848483;
+}
+
+.lec .fourth .container > figure figcaption {
+    font-weight: bold;
+    color: wheat;
+}
+
+.lec .fourth .container .article-fo {
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    line-height: 31px;
+    color: white;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lec .fourth .container .article-fo p span {
+    font-weight: 400;
+    color: wheat;
+}
+
+/*media*/
+
+@media (max-width: 1200px) {
+    .lec .fourth .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+/*start the fifth*/
+
+.lec .fifth {
+    padding: 70px 0;
+}
+
+.lec .fifth .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 22px;
+}
+
+.lec .fifth .container > figure {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.lec .fifth .container > figure img {
+    width: 350px;
+    box-shadow: 0 0 6px #848483;
+}
+
+.lec .fifth .container > figure figcaption {
+    font-weight: bold;
+}
+
+.lec .fifth .container .article-fif {
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    line-height: 31px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lec .fifth .container .article-fif div {
+    width: fit-content;
+    margin-top: 35px;
+    margin-bottom: 8px;
+    padding: 10px 21px;
+    position: relative;
+    border-radius: 35px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 0 12px #8d8d8d;
+    color: wheat;
+    background-color: #123265;
+}
+
+.lec .fifth .container .article-fif strong {
+    letter-spacing: 1px;
+    color: #188095;
+}
+
+/*media*/
+
+@media (max-width: 1200px) {
+    .lec .fifth .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .lec .fifth .container > figure img {
+        width: 240px;
+    }
+}
+
+    /*end body*/
+
+    /*start footer*/
+
+footer {
+    display: flex;
+    padding: 15px;
+    background-image: url(photos/معبد\ إدفو.jpg);
+    background-size: cover;
+    background-position: 0 90%;
+    border-radius: 56px 56px 0 0;
+    justify-content: center;
+    position: relative;
+}
+footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    background-color: #123265d1;
+}
+footer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f5f3f3;
+    z-index: -2;
+}
+
+footer div {
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+}
+
+footer span {
+    color: wheat;
+}
+
+/*media*/
+
+@media (max-width: 500px) {
+    footer div {
+        font-size: 14px;
+    }
+}   
+
+@media (max-width: 400px) {
+    footer div {
+        font-size: 11px;
+    }
+}   
+    
+    /*end footer*/
